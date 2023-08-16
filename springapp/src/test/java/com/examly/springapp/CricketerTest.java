@@ -153,9 +153,9 @@ public void W1_day2Clientinterface() {
         assertEquals("Virat Kohli", cricketersList.get(2).getName(), "Oldest cricketer should be Virat Kohli");
     }
         
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/appdb";
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/project";
     private static final String JDBC_USER = "root";
-    private static final String JDBC_PASS = "examly";
+    private static final String JDBC_PASS = "Sound@0301";
 
     private Connection connection;
  @Test
@@ -386,7 +386,16 @@ public void  usersConfig() {
 
     }
 
-
+//@Test
+//public void swagger() {
+//
+//        String filePath = "src/main/java/com/examly/springapp/configurations/SwaggerConfig.java";
+//
+//        File file = new File(filePath);
+//
+//        assertTrue(file.exists() && file.isFile());
+//
+//    }
 
     @Test
 
