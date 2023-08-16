@@ -23,7 +23,7 @@ public class ApplSecurityConfig {
 
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-		http.csrf().disable().cors().and().authorizeHttpRequests().antMatchers("/api/register","/api/auth/login","/api/admin/*","/api/organizer/*","/player/***").permitAll()
+		http.csrf().disable().cors().and().authorizeHttpRequests().antMatchers("/api/register","/api/auth/login","/api/admin/*","/api/organizer/*","/player/***","/player").permitAll()
 	      //  .and().authorizeHttpRequests().requestMatchers("/api/login").hasAuthority("ADMIN")
 //		        .and().authorizeHttpRequests().requestMatchers("/api/organizer/*").hasAuthority("ORGANIZER")
 				.anyRequest().authenticated()
