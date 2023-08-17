@@ -71,7 +71,7 @@ describe('OrganizerComponent', () => {
     expect(teamListItems.length).toBe(2);
   });
 
-  fit('Week5_Day2_should fetch unsold players on initialization', () => {
+  fit('Week5_Day2_should_fetch_unsold_players_on_initialization', () => {
     mockOrganizerService.getUnsoldPlayers.and.returnValue(of(mockUnsoldPlayers));
     fixture.detectChanges();
     expect(component.unsoldPlayers).toEqual(mockUnsoldPlayers);
