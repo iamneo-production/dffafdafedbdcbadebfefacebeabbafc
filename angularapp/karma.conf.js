@@ -7,7 +7,7 @@ module.exports = function(config) {
     customLaunchers: {
       CustomWebDriver: {
         base: 'WebDriver',
-        browser: customWebDriver,
+        browser: customWebDriver
       },
     },
     // ...
