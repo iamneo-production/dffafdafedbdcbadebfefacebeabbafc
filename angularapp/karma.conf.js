@@ -1,26 +1,32 @@
-const customWebDriver = require('./webdriver-config'); // Adjust the path as needed
 
-// module.exports = function(config) {
-//   config.set({
-//     // ...
-//     browsers: ['CustomWebDriver'],
-//     customLaunchers: {
-//       CustomWebDriver: {
-//         base: 'WebDriver',
-//         browser: customWebDriver,
-//         logLevel: config.LOG_DEBUG
-//       },
-//     },
-//     // ...
-//   });
-// };
-module.exports = function(config) {
+const puppeteer = require('puppeteer');
+process.env.CHROME_BIN = puppeteer.executablePath();
+module.exports = function (config) {
   config.set({
-    webdriver: {
-      // Change this URL to the appropriate Selenium server URL
-      serverUrl: 'http://localhost:4444/wd/hub'
-    }
+    basePath: '',
+    frameworks: ['jasmine', '@angular-devkit/build-angular'],
+    plugins: [
+      require('karma-jasmine'),
+      require('karma-chrome-launcher'),
+      require('karma-jasmine-html-reporter'),
+      require('karma-coverage-istanbul-reporter'),
+      require('@angular-devkit/build-angular/plugins/karma')
+    ],
+    client: {
+      clearContext: false // leave Jasmine Spec Runner output visible in browser
+    },
+    coverageIstanbulReporter: {
+      dir: require('path').join(__dirname, './coverage/angularapp'),
+      reports: ['html', 'lcovonly', 'text-summary'],
+      fixWebpackSourcePaths: true
+    },
+    reporters: ['progress', 'kjhtml'],
+    port: 4841,
+    colors: true,
+    logLevel: config.LOG_INFO,
+    autoWatch: true,
+    browsers: ['Chrome'],
+    singleRun: false,
+    restartOnFileChange: true
   });
 };
-
-
