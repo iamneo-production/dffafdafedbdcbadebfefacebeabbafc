@@ -1,7 +1,7 @@
 
 const puppeteer = require('puppeteer');
 // process.env.CHROME_BIN = puppeteer.executablePath();
-// console.log(process.env.CHROME_BIN)
+console.log(process.env.CHROME_BIN)
 module.exports = function (config) {
   config.set({
     basePath: '',
@@ -34,7 +34,7 @@ module.exports = function (config) {
       }
     },
     reporters: ['progress'],
-    port: 8080,
+    port: 8081,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
