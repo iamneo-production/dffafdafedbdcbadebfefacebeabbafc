@@ -1,7 +1,6 @@
 
 const puppeteer = require('puppeteer');
-// process.env.CHROME_BIN = puppeteer.executablePath();
-console.log(process.env.CHROME_BIN)
+process.env.CHROME_BIN = puppeteer.executablePath();
 module.exports = function (config) {
   config.set({
     basePath: '',
@@ -28,7 +27,7 @@ module.exports = function (config) {
       showSpecTiming: false,      // print the time elapsed for each spec
       failFast: true,             // test would finish with error when a first fail occurs
       prefixes: {
-        success: 'OK: ',      // override prefix for passed tests, default is '✓ '
+        success: '    OK: ',      // override prefix for passed tests, default is '✓ '
         failure: 'FAILED: ',      // override prefix for failed tests, default is '✗ '
         skipped: 'SKIPPED: '      // override prefix for skipped tests, default is '- '
       }
@@ -38,12 +37,11 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['ChromeHeadless'],
+    browsers: ['CustomChromeHeadless'],
     customLaunchers: {
-      ChromeHeadless: {
+      CustomChromeHeadless: {
         base: 'Chrome',
         flags: ['--headless','--disable-gpu','--remote-debugging-port=9222','--no-sandbox', '--disable-setuid-sandbox'],
-        executablePath: '/usr/bin/chromium-browser'
       },
     },
     singleRun: true,
