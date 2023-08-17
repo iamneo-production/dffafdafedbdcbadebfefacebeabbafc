@@ -16,17 +16,9 @@ const customWebDriver = require('./webdriver-config'); // Adjust the path as nee
 // };
 module.exports = function(config) {
   config.set({
-    browsers: ['RemoteChrome'],
-    customLaunchers: {
-      RemoteChrome: {
-        base: 'WebDriver',
-        browserName: 'chrome',
-        name: 'Karma',
-        config: {
-          hostname: 'localhost',
-          port: 4444
-        }
-      }
+    webdriver: {
+      // Change this URL to the appropriate Selenium server URL
+      serverUrl: 'http://localhost:4444/wd/hub'
     }
   });
 };
