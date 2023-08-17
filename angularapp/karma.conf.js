@@ -38,9 +38,9 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['CustomChromeHeadless'],
+    browsers: ['ChromeHeadless'],
     customLaunchers: {
-      CustomChromeHeadless: {
+      ChromeHeadless: {
         base: 'Chrome',
         flags: ['--headless','--disable-gpu','--remote-debugging-port=9222','--no-sandbox', '--disable-setuid-sandbox'],
         executablePath: '/home/coder/.cache/puppeteer/chrome/linux-1108766/chrome-linux/chrome'
