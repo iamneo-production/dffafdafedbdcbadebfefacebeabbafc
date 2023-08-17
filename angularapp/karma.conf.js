@@ -1,16 +1,13 @@
+const customWebDriver = require('./webdriver-config'); // Adjust the path as needed
+
 module.exports = function(config) {
   config.set({
-    port:
     // ...
-    browsers: ['Selenium_Chrome'], // Use the name of the browser launcher
+    browsers: ['CustomWebDriver'],
     customLaunchers: {
-      Selenium_Chrome: {
+      CustomWebDriver: {
         base: 'WebDriver',
-        browserName: 'chrome',
-        config: {
-          // Specify the WebDriver options here
-          // Example: chromeOptions: { args: ['--headless'] }
-        },
+        browser: customWebDriver,
       },
     },
     // ...
