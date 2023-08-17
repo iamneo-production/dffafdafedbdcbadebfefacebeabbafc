@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: com.examly.springapp.CricketerTest
 -------------------------------------------------------------------------------
-Tests run: 27, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 6.836 s <<< FAILURE! - in com.examly.springapp.CricketerTest
+Tests run: 27, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 6.661 s <<< FAILURE! - in com.examly.springapp.CricketerTest
 w3_day2playerupdateJpa  Time elapsed: 0.013 s  <<< FAILURE!
 java.lang.AssertionError: Status expected:<200> but was:<401>
 	at com.examly.springapp.CricketerTest.w3_day2playerupdateJpa(CricketerTest.java:301)
@@ -10,7 +10,7 @@ W3_day2getallPlayer  Time elapsed: 0.005 s  <<< FAILURE!
 java.lang.AssertionError: Status expected:<200> but was:<401>
 	at com.examly.springapp.CricketerTest.W3_day2getallPlayer(CricketerTest.java:311)
 
-W2_day6testDeleteJpa  Time elapsed: 0.036 s  <<< FAILURE!
+W2_day6testDeleteJpa  Time elapsed: 0.005 s  <<< FAILURE!
 java.lang.AssertionError: Status expected:<200> but was:<401>
 	at com.examly.springapp.CricketerTest.W2_day6testDeleteJpa(CricketerTest.java:271)
 
@@ -18,7 +18,7 @@ W2_day6testupdateDetailsJpa  Time elapsed: 0.004 s  <<< FAILURE!
 java.lang.AssertionError: Status expected:<200> but was:<401>
 	at com.examly.springapp.CricketerTest.W2_day6testupdateDetailsJpa(CricketerTest.java:261)
 
-w3_day2playeraddJpa  Time elapsed: 0.003 s  <<< FAILURE!
+w3_day2playeraddJpa  Time elapsed: 0.004 s  <<< FAILURE!
 java.lang.AssertionError: Status expected:<200> but was:<401>
 	at com.examly.springapp.CricketerTest.w3_day2playeraddJpa(CricketerTest.java:288)
 
