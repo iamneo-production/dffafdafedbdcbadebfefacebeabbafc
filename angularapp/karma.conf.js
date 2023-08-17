@@ -21,7 +21,7 @@ module.exports = function (config) {
       fixWebpackSourcePaths: true
     },
     reporters: ['progress', 'kjhtml'],
-    port: 4841,
+    port: 4444,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
