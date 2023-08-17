@@ -34,7 +34,7 @@ public PlayerDetails update(PlayerDetails player,int id){
 public boolean deletePlayer(int id)
 {
     try{
-        repo.deleteById((int) id);
+        repo.deleteById((long) id);
         return true;
     }catch(Exception e)
     {
