@@ -1,7 +1,7 @@
 
 const puppeteer = require('puppeteer');
-process.env.CHROME_BIN = puppeteer.executablePath();
-console.log(process.env.CHROME_BIN)
+// process.env.CHROME_BIN = puppeteer.executablePath();
+// console.log(process.env.CHROME_BIN)
 module.exports = function (config) {
   config.set({
     basePath: '',
@@ -43,6 +43,7 @@ module.exports = function (config) {
       CustomChromeHeadless: {
         base: 'Chrome',
         flags: ['--headless','--disable-gpu','--remote-debugging-port=9222','--no-sandbox', '--disable-setuid-sandbox'],
+        executablePath: '/home/coder/.cache/puppeteer/chrome/linux-1108766/chrome-linux/chrome'
       },
     },
     singleRun: true,
