@@ -42,6 +42,7 @@ module.exports = function (config) {
       CustomChromeHeadless: {
         base: 'Chrome',
         flags: ['--headless','--disable-gpu','--remote-debugging-port=9222','--no-sandbox', '--disable-setuid-sandbox'],
+        executablePath: '/usr/bin/chromium-browser'
       },
     },
     singleRun: true,
