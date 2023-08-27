@@ -23,7 +23,7 @@ public class AdminController {
     private final TeamService teamService;
 
 
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "https://8081-dffafdafedbdcbadebfefacebeabbafc.premiumproject.examly.io")
     @GetMapping("/players")
     public List<Player> getAllPlayers() {
     	List <Player> player = adminService.getAllPlayers();

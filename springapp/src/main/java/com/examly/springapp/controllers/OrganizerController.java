@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/organizer")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://8081-dffafdafedbdcbadebfefacebeabbafc.premiumproject.examly.io")
 public class OrganizerController {
     private OrganizerService organizerService;
 
