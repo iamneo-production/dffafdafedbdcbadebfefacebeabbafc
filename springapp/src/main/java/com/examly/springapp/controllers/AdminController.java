@@ -72,13 +72,13 @@ return "Welcome to SpringProject";
         return adminService.getAllTeamsByJPA();
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "https://8080-dffafdafedbdcbadebfefacebeabbafc.premiumproject.examly.io")
     @PostMapping("/teams")
     public Team createTeam(@RequestBody Team team) {
         return adminService.createTeam(team);
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "https://8080-dffafdafedbdcbadebfefacebeabbafc.premiumproject.examly.io")
     @GetMapping("/teams")
     public List<Team> getAllTeams() {
     	List <Team> teams = adminService.getAllTeams();
@@ -103,7 +103,7 @@ return "Welcome to SpringProject";
     }
 
     // Endpoint to create a new player
-    @CrossOrigin(origins = "http://localhost:8080")
+    @CrossOrigin(origins = "https://8080-dffafdafedbdcbadebfefacebeabbafc.premiumproject.examly.io")
     @PostMapping("/players")
     public Player createPlayer(@RequestBody Player player) {
         return adminService.createPlayer(player);
